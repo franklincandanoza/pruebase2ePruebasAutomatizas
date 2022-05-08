@@ -1,0 +1,12 @@
+{
+    "baseUrl": "http://localhost:2368/ghost",
+    "env": {
+        "user": "frankcandanoza@hotmail.com",
+        "password": "Pepe123456"
+    },
+    "testFiles": [
+        "create_member.spec.js",
+        "delete_member.spec.js"
+    ]
+    
+}
