@@ -7,6 +7,12 @@
 - Rafael Rodriguez (rh.rodriguezr1@uniandes.edu.co)
 
 
+## Instalar Ghost usando docker
+```
+docker run -d --name some-ghost -e url=http://localhost:2368 -p 2368:2368 ghost
+```
+Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456
+
 ## Instalar Cypress
 ```
 npm install -g cypress
