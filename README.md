@@ -1,5 +1,13 @@
 # pruebase2ePruebasAutomatizas
 
+## How to run
+Para correr las pruebas con Cypress usar:
+`
+npm install -g cypress
+cypress run
+
+`
+
 
 #####FUNCIONALIDADES A TRABAJAR#################
 
