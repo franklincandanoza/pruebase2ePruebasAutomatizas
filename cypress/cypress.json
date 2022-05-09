@@ -6,7 +6,8 @@
     },
     "testFiles": [
         "create_member.spec.js",
-        "delete_member.spec.js"
+        "delete_member.spec.js",
+        "create_page.spec.js"
     ]
     
 }

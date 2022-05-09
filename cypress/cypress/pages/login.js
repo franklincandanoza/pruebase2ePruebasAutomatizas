@@ -5,6 +5,7 @@ export class Login {
 
     login(username, password) {
         this.navigate()
+        cy.wait(2000)
         cy.get('form').within(() => {
             cy.get('input[name="identification"]').type(username);
             cy.get('input[name="password"]').type(password);
@@ -13,7 +14,7 @@ export class Login {
             
         })
         cy.url().should('eq', cy.config('baseUrl')+'/#/dashboard');
-
+        cy.wait(2000)
         return this;
     }
 }
