@@ -13,6 +13,8 @@ docker run -d --name some-ghost -e url=http://localhost:2368 -p 2368:2368 ghost
 ```
 Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456
 
+Tambien es posible usar otro email y contraseña modificando el archivo: https://github.com/franklincandanoza/pruebase2ePruebasAutomatizas/blob/develop/cypress/cypress.json
+
 ## Cypress
 
 ### Instalar Cypress
