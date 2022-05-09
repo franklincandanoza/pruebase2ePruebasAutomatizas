@@ -27,8 +27,10 @@ cypress run
 - Listar Tags
 - Eliminar tag
 
+
 ### Escenarios de pruebas
 
-# Funcionalidad: Crear miembro
-- Escenario 1: Crear miembro de forma exitosa con los campos mínimos requeridos
-    -- Description: Hacer login sobre la aplicaciòn ghost 
+1. # Funcionalidad: Crear miembro
+    - Escenario 1: Crear miembro de forma exitosa con los campos mínimos requeridos
+    - Descripción: Se inicia sesión, se va a la lista de miembros, se crea el miembro y luego se valida que el nuevo miembro está en la lista de miembros registrados en el sistema.
+    
