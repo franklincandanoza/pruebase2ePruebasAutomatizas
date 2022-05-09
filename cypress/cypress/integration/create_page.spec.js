@@ -4,7 +4,7 @@ const login = new Login()
 import {Page} from "../pages/page"
 const page = new Page()
 
-describe('Create members', () => {
+describe('Create page', () => {
     
     beforeEach('Navigate and login into Ghost', ()=>{
 
