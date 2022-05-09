@@ -1,4 +1,11 @@
-# pruebase2ePruebasAutomatizas
+# Pruebas End to End usando Kraken y Cypress
+
+## Integrantes del grupo
+- Cristian Agudelo (c.agudeloh@uniandes.edu.co)
+- David Hidalgo (d.hidalgo@uniandes.edu.co)
+- Frank Candanoza (f.candanoza@uniandes.edu.co)
+- Rafael Rodriguez (rh.rodriguezr1@uniandes.edu.co)
+
 
 ## Instalar Cypress
 ```
