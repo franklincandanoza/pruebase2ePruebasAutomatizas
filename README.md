@@ -40,6 +40,13 @@ cypress run
     - Escenario 5: Eliminar miembro de forma exitosa que fue previamente creado: Se inicia sesión, se va a la lista de miembros, se va a la opciòn de nuevo miembro,se crea el miembro, se valida que el nuevo miembro está en la lista de miembros registrados en el sistema, se selecciona el miembro creado y en la vista de detalles del miembro se intenta eliminar, se confirma su eliminaciòn y luego en la vista de todos los miembros no debe aparecer el miembro previamente eliminado.
      - Escenario 6: Intentar eliminar un miembro pero cancelar la operaciòn en la confirmaciòn de la eliminaciòn: Se inicia sesión, se va a la lista de miembros, se va a la opciòn de nuevo miembro,se crea el miembro, se valida que el nuevo miembro está en la lista de miembros registrados en el sistema, se selecciona el miembro creado y en la vista de detalles del miembro se intenta eliminar, se cancela su eliminaciòn y debe seguir listado en la lista de miembros.
 
+3. ### Funcionalidad: Crear Página, Listar Páginas y Publicar Páginas
+    - Escenario 7: Crear una página de forma exitosa con los campos mínimos requeridos: Se inicia sesión, se va a la lista de páginas, se va a la opción de nueva página, se crea una página y luego se valida que la nueva página está en la lista de páginas creadas en el sistema.
+    - Escenario 8: Crear una página cuando no se diligencia el titulo ni la descripción: Se inicia sesión, se va a la lista de páginas, se va a la opción de nueva página, no se registra ningun dato, se intentar guardar y se valida que no se crea la página.
+    - Escenario 9: Crear una página cuando la longitud del titulo está por encima del máximo: Se inicia sesión, se va a la lista de páginas, se va a la opción de nueva página, se registran los datos de la nueva página con un titulo de mas de 250 carácteres, se intentar guardar y se debe generar validaciòn de límite excedido, se devuelve a la lista de páginasy se valida que efectivamente no se haya creado la página.
+    - Escenario 10: Crear una página para luego publicarla: Se inicia sesión, se va a la lista de páginas, se va a la opciòn de nueva página,se crea la página y publica la nueva página, luego se valida que la página este publicada. 
+
+
 # Evaluaciòn herramienta Cypress
 ## Pros:
 
