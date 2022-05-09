@@ -1,15 +1,18 @@
 # pruebase2ePruebasAutomatizas
 
-## How to run
-Para correr las pruebas con Cypress usar:
+## How to install Cypress
 ```
 npm install -g cypress
+```
+
+## How to run cypress test
+Para correr las pruebas con Cypress usar:
+```
 cypress run
 ```
 
 
-#####FUNCIONALIDADES A TRABAJAR#################
-
+## Funcionalidades bajo pruebas
 - Crear Post
 - Publicar Post
 - Listar Posts programados
@@ -23,7 +26,9 @@ cypress run
 - Crear tag
 - Listar Tags
 - Eliminar tag
-- Importar usuarios
-- Admin de Ghost
-- Autenticación
-- Actualizar configuración general
+
+### Escenarios de pruebas
+
+# Funcionalidad: Crear miembro
+- Escenario 1: Crear miembro de forma exitosa con los campos mínimos requeridos
+    - 
