@@ -78,5 +78,7 @@ cypress run
 
 # Evaluaciòn herramienta Kraken
 ## Pros:
-
+    - Se integra mejor con dispositivos moviles que Cypress
 ## Contras:
+    - La curva de aprendizaje de la herramienta es muy pronunciada en los primeros pasos de la adopcion, especialmente en la etapa de "set up"
+    - Comunidad poco activa y poca documentación
