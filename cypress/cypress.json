@@ -7,7 +7,12 @@
     "testFiles": [
         "create_member.spec.js",
         "delete_member.spec.js",
-        "create_page.spec.js"
+        "create_page.spec.js",
+        "scenario1.spec.js",
+        "scenario2.spec.js",
+        "scenario3.spec.js",
+        "scenario4.spec.js",
+        "scenario5.spec.js"
     ]
     
 }
