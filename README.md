@@ -13,12 +13,14 @@ docker run -d --name some-ghost -e url=http://localhost:2368 -p 2368:2368 ghost
 ```
 Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456
 
-## Instalar Cypress
+## Cypress
+
+### Instalar Cypress
 ```
 npm install -g cypress
 ```
 
-## Ejecuciòn de pruebas con Cypress
+### Ejecuciòn de pruebas con Cypress
 
 Para correr las pruebas con Cypress ubicarse sobre la carpeta cypress y luego ejecutar:
 ```
@@ -33,7 +35,7 @@ cypress run
 - Listar todos los posts
 - Crear página
 - Listar páginas
-- Eliminar página
+- Publicar página
 - Crear miembro
 - Listar miembros
 - Eliminar miembro
