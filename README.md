@@ -47,17 +47,17 @@ cypress run
     - Escenario 10: Crear una página para luego publicarla: Se inicia sesión, se va a la lista de páginas, se va a la opciòn de nueva página,se crea la página y publica la nueva página, luego se valida que la página este publicada. 
     
 4. ### Funcionalidad:  Crear Post
-    - Escenario: Crear un post de manera exitosa: Autenticarse en Ghost, se da click en el botón Write your first Post, luego se coloca un título, se da click en Begin       your first post y luego click en file.
+    - Escenario 11: Crear un post de manera exitosa: Autenticarse en Ghost, se da click en el botón Write your first Post, luego se coloca un título, se da click en Begin       your first post y luego click en file.
 
 5. ### Funcionalidad:  Crear Post,Publicar Post
-    - Escenario: Crear y publicar un post de manera exitosa. Autenticarse en Ghost, se da click en el botón Write your first Post, luego se coloca un título, se da click     en Begin your first post y luego click en file, luego se da click en publish, y se confirma la publicación con el botón publish.
+    - Escenario 12: Crear y publicar un post de manera exitosa. Autenticarse en Ghost, se da click en el botón Write your first Post, luego se coloca un título, se da click     en Begin your first post y luego click en file, luego se da click en publish, y se confirma la publicación con el botón publish.
 6. ### Funcionalidad:  Listar post programados
-    - Escenario: Listar los posts programados de manera exitosa. Autenticarse en Ghost, luego click en customize your site, click en post, luego seleccionar la opción en     Published de Published post.
+    - Escenario 13: Listar los posts programados de manera exitosa. Autenticarse en Ghost, luego click en customize your site, click en post, luego seleccionar la opción en     Published de Published post.
 
 7. ### Funcionalidad:  Listar todos los posts
-    - Escenario: Listar todos los posts de manera exitosa. Autenticarse en Ghost, luego click en customize your site, click en post, luego seleccionar la opción en Published de Published post, click en All posts.
+    - Escenario 14: Listar todos los posts de manera exitosa. Autenticarse en Ghost, luego click en customize your site, click en post, luego seleccionar la opción en Published de Published post, click en All posts.
 
-    - Escenario: Escoger los posts por el más reciente de manera exitosa. Autenticarse en Ghost, luego click en customize your site, click en post, luego seleccionar la opción sort by y luego escoger Newest.
+    - Escenario 15: Escoger los posts por el más reciente de manera exitosa. Autenticarse en Ghost, luego click en customize your site, click en post, luego seleccionar la opción sort by y luego escoger Newest.
 
 
 
