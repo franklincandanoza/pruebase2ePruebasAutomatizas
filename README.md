@@ -77,16 +77,16 @@ cypress run
     - Escenario 15: Escoger los posts por el más reciente de manera exitosa. Autenticarse en Ghost, luego click en customize your site, click en post, luego seleccionar la opción sort by y luego escoger Newest.
 
 8. ### Funcionalidad:  Crear Etiquetas, Listar etiquetas, Autenticar
-  - Escenario 16: Autenticarse, ingrear al listado de etiquetas, Pulsar en el boton nueva etiqueta. Ingresar valores para la creación  en el formaulario y pulsar Save. Lueg volver a ingresar al listado de etiquetas y vlidar que haya sido creada.
+    - Escenario 16: Autenticarse, ingrear al listado de etiquetas, Pulsar en el boton nueva etiqueta. Ingresar valores para la creación  en el formaulario y pulsar Save. Lueg volver a ingresar al listado de etiquetas y vlidar que haya sido creada.
 
- - Escenario 17: Autenticarse, ingrear al listado de etiquetas, Pulsar en el boton nueva etiqueta. Ingresar valores existentes para la creación  en el formulario y pulsar Save. El sistema debe mostrar un mensaje de alerta que ya esta creada la eqtieueta.
+    - Escenario 17: Autenticarse, ingrear al listado de etiquetas, Pulsar en el boton nueva etiqueta. Ingresar valores existentes para la creación  en el formulario y pulsar Save. El sistema debe mostrar un mensaje de alerta que ya esta creada la eqtieueta.
  
  9. ### Funcionalidad:  Listar diseño, modificar diseño de Ghost, Autenticar
- - Escenario 18: Autenticarse, ingrear al diseño general. Ingresar valores para la creación  en el formulario y pulsar Save. El sistema debe validar que el boton muestre un valor "Saved"
+    - Escenario 18: Autenticarse, ingrear al diseño general. Ingresar valores para la creación  en el formulario y pulsar Save. El sistema debe validar que el boton muestre un valor "Saved"
+
+    - Escenario 19: Autenticarse, ingresar al diseño general. Ingresar valores vacios para la creación  en el formulario y pulsar Save. El sistema debe mosttar un mensaje llamado "You must specify a URL or relative path"
  
- - Escenario 19: Autenticarse, ingresar al diseño general. Ingresar valores vacios para la creación  en el formulario y pulsar Save. El sistema debe mosttar un mensaje llamado "You must specify a URL or relative path"
- 
- - Escenario 20: Autenticarse, ingresar al diseño general. Ingresar valores ivalidos y repetidos para la creación  en el formulario y pulsar Save. El sistema debe mosttar un mensaje llamado "You must specify a URL or relative path"
+    - Escenario 20: Autenticarse, ingresar al diseño general. Ingresar valores ivalidos y repetidos para la creación  en el formulario y pulsar Save. El sistema debe mosttar un mensaje llamado "You must specify a URL or relative path"
 
 
 # Evaluaciòn herramienta Cypress
