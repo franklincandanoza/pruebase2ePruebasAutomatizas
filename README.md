@@ -7,7 +7,7 @@ npm install -g cypress
 
 ## Ejecuciòn de pruebas con Cypress
 
-Para correr las pruebas con Cypress bicarse sobre la carpeta cypress y luego ejecutar:
+Para correr las pruebas con Cypress ubicarse sobre la carpeta cypress y luego ejecutar:
 ```
 cypress run
 ```
