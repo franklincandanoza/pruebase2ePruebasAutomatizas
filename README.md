@@ -63,8 +63,18 @@ cypress run
 
 # Evaluaciòn herramienta Cypress
 ## Pros:
+    - Instalaciòn sencilla con las librerias requeridas para no invertir tanto tiempo en instalaciòn, sino por el contrario el inicio de la automatizaciòn es rápido.
+    - La configuraciòn básica que se requiere para iniciar es sencilla y fácil de configurar.
+    - La documentación en general es muy completa y con muchos ejemplos para seguir y solucionar problemas.
+    - La comunidad para dar soporte a problemas es muy buena, y en general es una herramienta muy usada por automatizadores de pruebas, lo que facilita y apoya mucho en la soluciòn y retos que se presenten.
+    - Mientras se realiza la ejecuciòn de los escenarios de pruebas, se toman snapshots que incluso ayudan mucho en la identificaciòn de los pasos de prueba pero también en la documentaciòn de los mismos casos. Adicional, para fallos es bueno para la toma de evidencias.
+    - Nos permite ver la ejecuciòn de los test en una GUI donde podemos ver los comandos ejecutados y el resultado de las pruebas. Esto es adicional a la ejecuciòn por consola.
+    - Graba videos como evidencia de las pruebas realizadas y muy útiles para casos donde podamos tener bugs en la aplicación.
+    - Podemos ejecutar los test ocultando el navegador lo que ayuda mucho en la optimizaciòn de recursos.
 
 ## Contras
+    - Las características de la máquina pueden impactar en el rendimiento de las pruebas causando que con bajos recursos, tarde mucho tiempo en ejecutarse e incluso haciendo que fallen pruebas por la demora en la carga de los recursos que está esperando la prueba. Esto nos obligó a aumentar un poco las esperas para garantizar que todos los miembros del equipo pudieran ejecutar los escenarios.
+
 
 # Evaluaciòn herramienta Kraken
 ## Pros:
