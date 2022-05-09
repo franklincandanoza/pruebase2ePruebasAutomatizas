@@ -13,7 +13,7 @@ export class Login {
             cy.get('button.login.gh-btn.gh-btn-login.gh-btn-block.gh-btn-icon.js-login-button.ember-view').click();
             
         })
-        cy.url().should('eq', cy.config('baseUrl')+'/#/dashboard');
+        //cy.url().should('eq', cy.config('baseUrl')+'/#/dashboard');
         cy.wait(2000)
         return this;
     }

@@ -10,11 +10,11 @@ describe('Escenario 3: Cambiar el diseño, ingresar de nuevo y validar que tenga
         //cy.wait(1000);
         
         //probar();
-        access.enterEmail('c.agudeloh@uniandes.edu.co');
-        access.enterPassword('Ghos2022..');
+        access.enterEmail(Cypress.env('user'));
+        access.enterPassword(Cypress.env('password'));
         access.send();
         //verificamos que el acceso es correcto
-        cy.url().should('be.equal', 'http://localhost:2368/ghost/#/site');
+        //cy.url().should('be.equal', cy.config('baseUrl')+'/#/site');
         //ingresar datos en formulario
         //ingresar_texto('tag-name', "Etiqueta de prueba");
     });
@@ -22,9 +22,9 @@ describe('Escenario 3: Cambiar el diseño, ingresar de nuevo y validar que tenga
     it('vamos a la lista de diseño', function() {
         //vamos a la lista de Tags
         
-        cy.visit('http://localhost:2368/ghost/#/settings/design');
+        cy.visit(cy.config('baseUrl')+'/#/settings/design');
         cy.wait(1500);
-        cy.url().should('be.equal', 'http://localhost:2368/ghost/#/settings/design');
+        cy.url().should('be.equal', cy.config('baseUrl')+'/#/settings/design');
         cy.wait(1500);
     });
     

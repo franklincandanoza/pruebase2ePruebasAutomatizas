@@ -1,6 +1,6 @@
 class LoginPage{
      navigate() {
-        cy.visit('http://localhost:2368/ghost');
+        cy.visit(cy.config('baseUrl')+'');
         cy.wait(2000);
     }
 
@@ -22,20 +22,20 @@ class LoginPage{
                  }
              });*/
         //cy.get('input').type('email')
-        cy.get('[id=ember8]').clear();
-        cy.get('[id=ember8]').type(username);
+        cy.wait(1000)
+        cy.get('input[name="identification"]').type(username);
         
         return this;
      
     } 
     
     enterPassword(pswd) {
-    cy.get('#ember10').clear();
-    cy.get('#ember10').type(pswd)
-    return this
+        cy.wait(1000)
+        cy.get('input[name="password"]').type(pswd);
+        return this
     }
     send(){
-            cy.get('#ember12').click({force:true});
+        cy.get('button.login.gh-btn.gh-btn-login.gh-btn-block.gh-btn-icon.js-login-button.ember-view').click();
     }
 
 

@@ -10,11 +10,11 @@ describe('Escenario 2: Intentar Crear una etiquetaque ya existe', function() {
         //cy.wait(1000);
         
         //probar();
-        access.enterEmail('c.agudeloh@uniandes.edu.co');
-        access.enterPassword('Ghos2022..');
+        access.enterEmail(Cypress.env('user'));
+        access.enterPassword(Cypress.env('password'));
         access.send();
         //verificamos que el acceso es correcto
-        cy.url().should('be.equal', 'http://localhost:2368/ghost/#/site');
+        //cy.url().should('be.equal', cy.config('baseUrl')+'/#/site');
         //ingresar datos en formulario
         //ingresar_texto('tag-name', "Etiqueta de prueba");
     });
@@ -22,8 +22,8 @@ describe('Escenario 2: Intentar Crear una etiquetaque ya existe', function() {
     it('vamos a la lista de Tags', function() {
         //vamos a la lista de Tags
         cy.wait(1500);
-        cy.visit('http://localhost:2368/ghost/#/tags');
-        cy.url().should('be.equal', 'http://localhost:2368/ghost/#/tags');
+        cy.visit(cy.config('baseUrl')+'/#/tags');
+        cy.url().should('be.equal', cy.config('baseUrl')+'/#/tags');
         cy.wait(1500);
     });
     
@@ -32,7 +32,7 @@ describe('Escenario 2: Intentar Crear una etiquetaque ya existe', function() {
          const utilities = new Utilities();
         utilities.pulsar_boton_link('span', 'New tag');
         cy.wait(1000);
-        cy.url().should('be.equal', 'http://localhost:2368/ghost/#/tags/new');
+        cy.url().should('be.equal', cy.config('baseUrl')+'/#/tags/new');
     });
     
     it('Ingresar Datos y guardar nuevo tag', function() {
