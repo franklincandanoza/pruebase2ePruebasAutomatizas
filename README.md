@@ -31,4 +31,4 @@ cypress run
 
 # Funcionalidad: Crear miembro
 - Escenario 1: Crear miembro de forma exitosa con los campos mínimos requeridos
-    - 
+    -- Description: Hacer login sobre la aplicaciòn ghost 
