@@ -39,6 +39,6 @@ cypress run
 
 
 2. ### Funcionalidad: Eliminar miembro, Listar miembros, crear miembro
-    - Escenario 5: Eliminar miembro de forma exitosa que fue previamente creado: Se inicia sesión, se va a la lista de miembros, se va a la opciòn de nuevo miembro,se crea el miembro, se valida que el nuevo miembro está en la lista de miembros registrados en el sistema, se selecciona el miembro creado y en la vista de detalles del miembro se intenta eliminar, se confirma su eliminaciòn y luego en la vista de todos los miembros no debe aparecer el miembro previamente eliminado.
+    - **Escenario 5**: Eliminar miembro de forma exitosa que fue previamente creado: Se inicia sesión, se va a la lista de miembros, se va a la opciòn de nuevo miembro,se crea el miembro, se valida que el nuevo miembro está en la lista de miembros registrados en el sistema, se selecciona el miembro creado y en la vista de detalles del miembro se intenta eliminar, se confirma su eliminaciòn y luego en la vista de todos los miembros no debe aparecer el miembro previamente eliminado.
      - Escenario 6: Intentar eliminar un miembro pero cancelar la operaciòn en la confirmaciòn de la eliminaciòn: Se inicia sesión, se va a la lista de miembros, se va a la opciòn de nuevo miembro,se crea el miembro, se valida que el nuevo miembro está en la lista de miembros registrados en el sistema, se selecciona el miembro creado y en la vista de detalles del miembro se intenta eliminar, se cancela su eliminaciòn y debe seguir listado en la lista de miembros.
     
