@@ -1,7 +1,7 @@
-import {Login} from "../pages/login"
+import {Login} from "./pages/login"
 const login = new Login()
 
-import {Page} from "../pages/page"
+import {Page} from "./pages/page"
 const page = new Page()
 
 describe('Create page', () => {
