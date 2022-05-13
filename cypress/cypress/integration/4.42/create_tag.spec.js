@@ -9,32 +9,83 @@ describe('Create tag', () => {
     beforeEach('Navigate and login into Ghost', ()=>{
 
         login.login(Cypress.env('user'), Cypress.env('password'))
+
+        cy.wait(2000)
     })
 
-    it('Test to create tag succesfully with mandatory fields', () => {
+    it.only('Test to create tag succesfully with mandatory fields', () => {
         
         // Redirect to create member form
         tag.navigate_to_tags_list()
 
-        /*
-        member.click_to_create_new_member()
+        cy.wait(2000)
 
-        var memberName = Math.random()
-        var memberEmail =  memberName + '@gmail.com'
-        var memberNote = 'Esta es la nota del nuevo miembro: '+memberName
+        tag.click_to_create_new_tag()
 
-        member.create_member(memberName, memberEmail, memberNote)
+        cy.wait(2000)
 
-        cy.wait(200)
-       
-        // Redirect to members list to validate its creation
-        member.navigate_to_members_list()
+        var tagName = Math.random()
+        var tagSlug =  tagName + '.slug'
+        var tagDescription = 'Esta es la descripción del nuevo tag : '+tagName
 
-        member.open_last_created_member()
+        tag.create_tag(tagName, tagSlug, tagDescription)
 
-        member.validate_created_member(memberName, memberEmail, memberNote)
-        
-        */
+        cy.wait(1500);
+
+        tag.navigate_to_tags_list()
+
+        cy.wait(1000)
+
+        tag.validate_if_exist_tag(tagName)
+    
     })
+
+    it('Test to create internal tag succesfully with mandatory fields', () => {
+        
+        // Redirect to create member form
+        tag.navigate_to_tags_list()
+
+        cy.wait(2000)
+
+        tag.click_to_create_new_tag()
+
+        cy.wait(2000)
+
+        var tagName = '#'+Math.random()
+        var tagSlug =  tagName + '.slug'
+        var tagDescription = 'Esta es la descripción del nuevo tag : '+tagName
+
+        tag.create_tag(tagName, tagSlug, tagDescription)
+
+        cy.wait(1500);
+
+        tag.validate_if_exist_internal_tag(tagName)
+    
+    })
+
+    it('Test to create tag failed when the form does not have all mandatory fields (tag name)', () => {
+
+        // Redirect to create member form
+        tag.navigate_to_tags_list()
+
+        cy.wait(2000)
+
+        tag.click_to_create_new_tag()
+
+        cy.wait(2000)
+
+        var tagSlug =  'tagslug'
+        var tagDescription = 'Esta es la descripción del nuevo tag'
+
+        tag.create_tag('', tagSlug, tagDescription)
+
+        // Assertions
+        tag.validateMessageWhenTagNameFieldValueIsMissing()
+        
+        cy.url().should('eq', cy.config('baseUrl')+'/#/tags/new')
+
+        
+    })
+
 
 })

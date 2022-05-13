@@ -1,5 +1,5 @@
 import LoginPage from "./LoginPage/LoginPage";
-import Utilities from "./Utilities/Utilities";
+import Utilities from "../Utilities/Utilities";
 
 describe('Escenario 2: Intentar Crear una etiquetaque ya existe', function() {
     //it('Autenticando credenciales', function() {

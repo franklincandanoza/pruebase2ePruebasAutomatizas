@@ -1,0 +1,13 @@
+{
+    "baseUrl": "http://localhost:3005/ghost",
+    "env": {
+        "user": "frankcandanoza@hotmail.com",
+        "password": "Pepe123456"
+    },
+    "testFiles": [
+        
+        "./3.41/scenario2.spec.js"
+    ]
+
+    
+}

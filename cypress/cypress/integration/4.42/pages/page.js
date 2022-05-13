@@ -67,7 +67,7 @@ export class Page {
     }
 
     validateMessageWhenNameFieldExceedsMaximumCharacterLimit(){
-        cy.get('div.modal-content').find('h1').eq(0).invoke('text').should('eq', 'Are you sure you want to leave this page?')        
+        cy.get('header[class="modal-header"]').invoke('text').should('eq','\n Are you sure you want to leave this page?\n    ')
     }
 
     validateMessageWhenMailMemberAlreadyExist(){

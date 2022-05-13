@@ -24,12 +24,14 @@ describe('Create members', () => {
 
         member.create_member(memberName, memberEmail, memberNote)
 
-        cy.wait(200)
+        cy.wait(2000)
        
         // Redirect to members list to validate its creation
         member.navigate_to_members_list()
 
         member.open_last_created_member()
+
+        cy.wait(2000)
 
         member.validate_created_member(memberName, memberEmail, memberNote)
         
@@ -69,7 +71,7 @@ describe('Create members', () => {
         var memberNote = 'Esta es la nota del nuevo miembro: '+memberName
 
         member.create_member(memberName.repeat(20), memberEmail, memberNote)
-        cy.wait(200)
+        cy.wait(2000)
 
         // Assertions
         member.validateMessageWhenNameFieldExceedsMaximumCharacterLimit()
@@ -92,7 +94,7 @@ describe('Create members', () => {
         var memberNote = 'Esta es la nota del nuevo miembro: '+memberName
 
         member.create_member(memberName, memberEmail, memberNote)
-        cy.wait(200)
+        cy.wait(2000)
 
         // Redirect to members list
         member.navigate_to_members_list()
@@ -101,7 +103,7 @@ describe('Create members', () => {
 
         // Required fields
         member.create_member(memberName, memberEmail, memberNote)
-        cy.wait(200)
+        cy.wait(2000)
 
         
         // Assertions
