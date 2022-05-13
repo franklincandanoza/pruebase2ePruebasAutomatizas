@@ -17,9 +17,6 @@ describe('Escenario 1: Crear una etiqueta, entrar al listado y valida que tenga 
         //cy.url().should('be.equal', cy.config('baseUrl')+'/#/site');
         
         
-        
-       
-        
         //ingresar datos en formulario
         //ingresar_texto('tag-name', "Etiqueta de prueba");
     });
