@@ -34,6 +34,23 @@ Para version de Ghost: 3.41
 cypress run --config-file cypress_ghost_3.41.json
 
 ```
+## Kraken
+
+### Instalar Kraken
+```
+crear un directorio
+entrar en el directorio
+npm install adb
+npm install assertthat
+npm install chai
+npm install kraken-node
+npm install fs
+npm install util
+```
+### Crear estructura del proyecto
+en el mismo directorio ejecutar
+ ./node_modules/kraken-node/bin/kraken-node gen
+ 
 
 
 ## Funcionalidades bajo pruebas
