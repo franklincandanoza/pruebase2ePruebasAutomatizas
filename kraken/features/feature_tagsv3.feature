@@ -50,7 +50,7 @@ Scenario: Deseo ingresar a la aplicación, ver la lista de etquetas, Intentar cr
     And I wait for 1 seconds
 
 @user3 @web
-Scenario: Deseo ingresar a la aplicación, ver la lista de etquetas, Intentar crear una etiqueta con valores vacios y verificar que se muestra el mensaje de err
+Scenario: Deseo ingresar a la aplicación, ver la lista de etiquetas, Intentar crear una etiqueta con valor de color aleatorio y verificar que se muestra el mensaje de error cuando no es un valor hexadecimal valido
     Given I go to "<URL1>"
     And I wait for 2 seconds
     When I enter email "<USERNAME1>" into selector "input[name='identification']"

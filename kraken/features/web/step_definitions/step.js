@@ -94,3 +94,46 @@ When('I push Save button with selector {kraken-string}', async function (button)
             let element = await this.driver.$(button);
             return await element.click();
          });
+
+Then('I go to Ghost Tags section {kraken-string}', async function (url) {
+           // Write code here that turns the phrase above into concrete actions
+           let element = await this.driver.url(url);
+          return element;
+         });
+         
+Then('I expect to stay in Ghost Tags section {kraken-string}', async function (url) {
+           // Write code here that turns the phrase above into concrete actions
+            let element = await this.driver.getUrl()
+            assert.that(element).is.equalTo(url);
+         });
+
+
+Then('I looking for tag {kraken-string} on tags list', async function (tag) {
+           // Write code here that turns the phrase above into concrete actions
+           let tag_aux =tag.toLowerCase();
+           let tag2= `a[href='#/tags/${tag_aux}/']`;
+           let element = await this.driver.$(tag2);
+           return element;
+            //assert.that(element.href).is.equalTo(tag);
+         });
+         
+ Then('I looking for error {kraken-string} on selector {kraken-string}', async function (string, selector) {
+           let element = await this.driver.$("p[class='response']");
+           let element2 = await element.getText();
+           assert.that(element2).is.equalTo(string);
+           //return element2;
+         });
+
+ When('I do not enter Tag Name', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return true;
+         });
+
+
+ Then('I expect for error {kraken-string} on selector {kraken-string}', async function (string, selector) {
+           let elements = await this.driver.$$("p[class='response']");
+           let element2 = await elements[1].getText();
+           assert.that(element2).is.equalTo(string);
+           
+           //return element2;
+         });
