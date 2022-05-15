@@ -1,5 +1,5 @@
 
-import {Screenshot} from './screenshots/screenshots'
+import {Screenshot} from '../Utilities/screenshots'
 const screenshot = new Screenshot()
 
 import {Page} from "./pages/page"

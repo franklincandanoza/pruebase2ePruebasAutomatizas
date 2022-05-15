@@ -1,8 +1,12 @@
+
+import {Screenshot} from '../Utilities/screenshots'
+const screenshot = new Screenshot()
+
 import {Login} from "./pages/login"
 const login = new Login()
 
 import {Tag} from "./pages/tag"
-const tag = new Tag()
+const tag = new Tag(screenshot)
 
 describe('Create tag', () => {
     
@@ -13,9 +17,9 @@ describe('Create tag', () => {
         cy.wait(2000)
     })
 
-    it.only('Test to create tag succesfully with mandatory fields', () => {
+    it('Test to create tag succesfully with mandatory fields', () => {
         
-        // Redirect to create member form
+        screenshot.case('Test to create tag succesfully with mandatory fields')
         tag.navigate_to_tags_list()
 
         cy.wait(2000)
@@ -42,7 +46,7 @@ describe('Create tag', () => {
 
     it('Test to create internal tag succesfully with mandatory fields', () => {
         
-        // Redirect to create member form
+        screenshot.case('Test to create internal tag succesfully with mandatory fields')
         tag.navigate_to_tags_list()
 
         cy.wait(2000)
@@ -65,7 +69,7 @@ describe('Create tag', () => {
 
     it('Test to create tag failed when the form does not have all mandatory fields (tag name)', () => {
 
-        // Redirect to create member form
+        screenshot.case('Test to create tag failed when the form does not have all mandatory fields (tag name)')
         tag.navigate_to_tags_list()
 
         cy.wait(2000)
