@@ -43,7 +43,7 @@ describe('Create page', () => {
 
     })
 
-    it.only('Test to create page failed but the maximum character is higher than allowed', () => {
+    it('Test to create page failed but the maximum character is higher than allowed', () => {
         
         // Redirect to create member form
         page.navigate_to_pages_list()
@@ -81,4 +81,29 @@ describe('Create page', () => {
         page.validate_published_page(pageName, pageDescription)
 
     })
+
+    
+    it.only('Test to create tag failed when the form does not have all mandatory fields (tag name)', () => {
+        screenshot.case('Test to create tag failed when the form does not have all mandatory fields (tag name)')
+        // Redirect to create member form
+        tag.navigate_to_tags_list()
+
+        cy.wait(2000)
+
+        tag.click_to_create_new_tag()
+
+        cy.wait(2000)
+
+        var tagSlug =  'tagslug'
+        var tagDescription = 'Esta es la descripción del nuevo tag'
+
+        tag.create_tag('tag name', tagSlug, tagDescription, 'trtrsw')
+
+        // Assertions
+        tag.validateMessageWhenTagColorIsWrong()
+        
+        cy.url().should('eq', cy.config('baseUrl')+'/#/tags/new')
+
+    })
+
   })

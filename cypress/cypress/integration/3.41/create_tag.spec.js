@@ -2,7 +2,8 @@ import {Login} from "./pages/login"
 const login = new Login()
 
 
-import {Screenshot} from './screenshots/screenshots'
+
+import {Screenshot} from '../Utilities/screenshots'
 const screenshot = new Screenshot()
 
 

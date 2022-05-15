@@ -21,7 +21,7 @@ export class Tag {
 
     }
 
-    create_tag(tagName, tagSlug, tagDescription) {
+    create_tag(tagName, tagSlug, tagDescription, color) {
 
         // Required fields
         cy.get('form').within(() => {
@@ -31,6 +31,8 @@ export class Tag {
             
             if(tagName)
                 cy.get('input[name="name"]').type(tagName)
+            if(color)
+                cy.get('input[name="accent-color"]').first().type(color)   
 
         })
         this.screenshot.take()
@@ -60,6 +62,10 @@ export class Tag {
         cy.get('button[class="gh-btn gh-btn-primary gh-btn-icon gh-btn-red ember-view"]').invoke('text').should('eq','    \n    \n    \n     Retry\n')
         this.screenshot.take()
         
+    }
+    validateMessageWhenTagColorIsWrong(){
+        cy.get('p[class="response"]').invoke('text').should('eq', '\n    \n\n    The colour should be in valid hex format\n\n    \n\n    \n')
+       
     }
 
 }
