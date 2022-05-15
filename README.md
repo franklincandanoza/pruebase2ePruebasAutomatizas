@@ -29,8 +29,11 @@ npm install -g cypress
 
 ### Configurar credenciales para Ghost
 Configurar las credenciales configuradas para Ghost durante el registro en los siguientes archivos:
+```
 Versión 4.44-> /cypress/cypress_ghost_4.44.json
+
 Versiòn 3.41-> /cypress/cypress_ghost_3.41.json
+```
 
 en las propiedades:
 ```
@@ -192,3 +195,4 @@ Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (do
     - La busqueda de texto en selectores repetidos es dificil de extraer.
     - Limitada la generación dedatos aleatorios con faker.
     
+
