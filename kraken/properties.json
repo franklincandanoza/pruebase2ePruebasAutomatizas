@@ -1,16 +1,34 @@
 {
-    "VERSION1": "3.41",
-    "VERSION2": "4.40",
-    "USERNAME1": "c.agudeloh@uniandes.edu.co",
-    "PASSWORD1": "Ghos2022..",
-    "PASSWORD2": "Ghos2022..&",
-    "URL1": "http://localhost:2368/ghost",
-    "URL2": "http://localhost:2368/ghost/#/site",
-    "URL3": "http://localhost:2368/ghost/#/tags",
-    "URL4": "http://localhost:3003/ghost",
-    "URL5": "http://localhost:3003/ghost/#/dashboard",
-    "URL6": "http://localhost:3003/ghost/#/tags",
-    "URL7": "http://localhost:2368/ghost/#/pages",
-    "URL8": "http://localhost:3003/ghost/#/pages"
+    "USERNAME": "frankcandanoza@hotmail.com",
+    "PASSWORD": "Pepe123456",
+
+    "GHOST-VERSION-1": "3.41",
+    "GHOST-VERSION-1-URL1": "http://localhost:3005/ghost",
+    "GHOST-VERSION-1-URL2": "http://localhost:3005/ghost/#/site",
+    "GHOST-VERSION-1-URL3": "http://localhost:3005/ghost/#/tags",
+    "GHOST-VERSION-1-URL4": "http://localhost:3005/ghost/#/pages",
+
+    "GHOST-VERSION-2": "4.44",
+    "GHOST-VERSION-2-URL1": "http://localhost:3003/ghost",
+    "GHOST-VERSION-2-URL2": "http://localhost:3003/ghost/#/dashboard",
+    "GHOST-VERSION-2-URL3": "http://localhost:3003/ghost/#/members",
+    "GHOST-VERSION-2-URL4": "http://localhost:3003/ghost/#/tags",
+    "GHOST-VERSION-2-URL5": "http://localhost:3003/ghost/#/pages",
+
+
+    "ESCENARIO_1": "1_crear_miembro_exitosamente",
+    "ESCENARIO_2": "2_crear_miembro_sin_correo",
+    "ESCENARIO_3": "3_crear_miembro_con_corre_invalido",
+    "ESCENARIO_4": "4_crear_miembro_con_corre_existente",
+    "ESCENARIO_5": "5_eliminar_miembro_exitosamente",
+    "ESCENARIO_6": "6_intentar_eliminar_miembro_pero_cancelar_operacion",
+
+    "ESCENARIO_7": "7_crear_pagina_exitosamente",
+
+
+    "ESCENARIO_16": "16_crear_etiqueta_exitosamente",
+    "ESCENARIO_17": "17_crear_etiqueta_con_valores_vacios",
+    "ESCENARIO_21": "21_crear_etiqueta_con_color_errado",
+    "ESCENARIO_22": "22_crear_etiqueta_interna_exitosamente"
     
 }

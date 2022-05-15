@@ -5,8 +5,11 @@
         "password": "Pepe123456"
     },
     "testFiles": [
-        
-        "./3.41/scenario2.spec.js"
+        "./3.41/scenario1.spec.js",
+        "./3.41/scenario2.spec.js",
+        "./3.41/scenario3.spec.js",
+        "./3.41/scenario4.spec.js",
+        "./3.41/scenario5.spec.js"
     ]
 
     

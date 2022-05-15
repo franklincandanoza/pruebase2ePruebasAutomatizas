@@ -32,7 +32,7 @@ Para correr las pruebas con Cypress ubicarse sobre la carpeta cypress y luego ej
 ```
 
 Para version de Ghost: 4.42
-cypress run --config-file cypress_ghost_4.42.json
+cypress run --config-file cypress_ghost_4.44.json
 
 Para version de Ghost: 3.41
 cypress run --config-file cypress_ghost_3.41.json

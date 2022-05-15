@@ -8,7 +8,7 @@ const {By} = require('webdriver');
 
 function takeScreenshot(driver, path, file){
         validate_dir(path);
-        let file2=path + "/"+ file;
+        let file2=path + "/"+ file+".jpg";
         return driver.takeScreenshot().then(image => fsp.writeFile(file2, image, 'base64'));
     }
 
@@ -25,7 +25,7 @@ function validate_dir(dir)
     
 function create_dir(dir2)
 {
-        fs2.mkdirSync(dir2);
+        fs2.mkdirSync(dir2, true);
 }
 
     
@@ -57,8 +57,8 @@ When('I enter password {kraken-string} into selector {kraken-string}', async fun
 
 
  When('I take screenshot of step {kraken-string} and scenario {kraken-string} and feature {kraken-string} and version {kraken-string}', async function (step, scenario, feature, version) {
-           let full_path = "./reports/screenshots/" + version;
-           let filename= feature + "_" + scenario + "_" + step;
+           let full_path = "./reports/screenshots/" + version + "/"+feature+"/escenario/"+scenario;
+           let filename= "Paso_" + step;
            takeScreenshot(this.driver, full_path, filename);
          });
 
@@ -144,20 +144,13 @@ Then('I looking for tag {kraken-string} on tags list', async function (tag) {
             //assert.that(element.href).is.equalTo(tag);
          });
          
- Then('I looking for error {kraken-string} on selector {kraken-string}', async function (string, selector) {
-           let element = await this.driver.$("p[class='response']");
-           let element2 = await element.getText();
-           assert.that(element2).is.equalTo(string);
-           //return element2;
-         });
-
- When('I do not enter Tag Name', function () {
+When('I do not enter Tag Name', function () {
            // Write code here that turns the phrase above into concrete actions
            return true;
          });
 
 
- Then('I expect for error {kraken-string} on selector {kraken-string}', async function (string, selector) {
+Then('I expect for error {kraken-string} on selector {kraken-string}', async function (string, selector) {
            let elements = await this.driver.$$("p[class='response']");
            let element2 = await elements[1].getText();
            assert.that(element2).is.equalTo(string);
