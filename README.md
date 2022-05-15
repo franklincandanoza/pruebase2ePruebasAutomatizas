@@ -8,8 +8,12 @@
 
 
 ## Instalar Ghost usando docker
+Para el diseño y ejecución de estas pruebas, se utilizaron dos versiones de Ghost 3.41 y 4.44
+
 ```
-docker run -d --name some-ghost -e url=http://localhost:2368 -p 2368:2368 ghost
+docker run -d --name ghost_3_41.1 -e url=http://localhost:2368 -p 3005:2368 ghost:3.41.1
+docker run -d --name ghost_4_44_0 -e url=http://localhost:3003 -p 3003:2368 ghost:4.44.0
+
 ```
 Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456
 
@@ -49,8 +53,28 @@ npm install util
 ```
 ### Crear estructura del proyecto
 en el mismo directorio ejecutar
+
  ./node_modules/kraken-node/bin/kraken-node gen
+
+crear el directorio screenshots dentro del directorio reports
+mkdir reports/screenshots
+
+### Estructura del proyecto
+- features = directorio donde se crean los archivos de funcionalidades con escenarios
+- features/web/steps = directorio donde se crean los pasos de cada uno de los escenarios
+- reports = directorio de reportes y screenshots
+- reports/screenshots/<version> = directorio donde se generan los screenshots de las pruebas según la version de ghost bajo pruebas
+    - F<#>_Scenario#_Paso#.png = formato del archivo de imagen del screenshot (Funcionalidad_escenario_paso.png)
+- properties.json = archivo de configuración con variables globales para la ejecución de los pasos en Gherkin.
+
  
+### Ejecuciòn de pruebas con Kraken
+
+Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (donde se instalo kraken localmente)  y luego ejecutar:
+```
+./node_modules/kraken-node/bin/kraken-node run
+
+```
 
 
 ## Funcionalidades bajo pruebas
@@ -132,6 +156,13 @@ en el mismo directorio ejecutar
 # Evaluaciòn herramienta Kraken
 ## Pros:
     - Se integra mejor con dispositivos moviles que Cypress
+    - Se genera una descricpión más comprensible de los escenarios para el cliente, al utilizar un lenguaje de alto nivel como Gherkin.
+    - Los pasos son reutilizables en diferentes escenarios.
+    
 ## Contras:
     - La curva de aprendizaje de la herramienta es muy pronunciada en los primeros pasos de la adopcion, especialmente en la etapa de "set up"
     - Comunidad poco activa y poca documentación
+    - No es muy clara la sintaxis de algunas de las funciones, tratamos de entender si se basaba en selenium, pero algunos metodos son diferentes.
+    - La busqueda de texto en selectores repetidos es dificil de extraer.
+    - Limitada la generación dedatos aleatorios con faker.
+    
