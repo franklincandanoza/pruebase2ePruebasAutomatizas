@@ -103,6 +103,7 @@ en el mismo directorio ejecutar
     - Escenario 16: Autenticarse, ingrear al listado de etiquetas, Pulsar en el boton nueva etiqueta. Ingresar valores para la creación  en el formaulario y pulsar Save. Lueg volver a ingresar al listado de etiquetas y vlidar que haya sido creada.
 
     - Escenario 17: Autenticarse, ingrear al listado de etiquetas, Pulsar en el boton nueva etiqueta. Ingresar valores existentes para la creación  en el formulario y pulsar Save. El sistema debe mostrar un mensaje de alerta que ya esta creada la eqtieueta.
+    - Escenario 21: Autenticarse, ingrear al listado de etiquetas, Pulsar en el boton nueva etiqueta. Ingresar valores errado para el color en la creación en el formulario y pulsar Save. El sistema debe mostrar un mensaje de alerta que el color es inválido.
  
  9. ### Funcionalidad:  Listar diseño, modificar diseño de Ghost, Autenticar
     - Escenario 18: Autenticarse, ingrear al diseño general. Ingresar valores para la creación  en el formulario y pulsar Save. El sistema debe validar que el boton muestre un valor "Saved"
