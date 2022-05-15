@@ -1,7 +1,16 @@
 {
+    "VERSION1": "3.41",
+    "VERSION2": "4.40",
     "USERNAME1": "c.agudeloh@uniandes.edu.co",
     "PASSWORD1": "Ghos2022..",
+    "PASSWORD2": "Ghos2022..&",
     "URL1": "http://localhost:2368/ghost",
     "URL2": "http://localhost:2368/ghost/#/site",
-    "URL3": "http://localhost:2368/ghost/#/tags"
+    "URL3": "http://localhost:2368/ghost/#/tags",
+    "URL4": "http://localhost:3003/ghost",
+    "URL5": "http://localhost:3003/ghost/#/dashboard",
+    "URL6": "http://localhost:3003/ghost/#/tags",
+    "URL7": "http://localhost:2368/ghost/#/pages",
+    "URL8": "http://localhost:3003/ghost/#/pages"
+    
 }
