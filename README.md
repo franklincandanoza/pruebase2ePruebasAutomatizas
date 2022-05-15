@@ -8,16 +8,17 @@
 
 
 ## Instalar Ghost usando docker
-Para el diseño y ejecución de estas pruebas, se utilizaron dos versiones de Ghost 3.41 y 4.44
+Para el diseño y ejecución de estas pruebas, se utilizaron dos versiones de Ghost 3.41 y 4.44 que ya tiene imagénes definidas en DockerHub. Con los siguientes comandos se podrían descargar y ejecutar el contenedor teniendo como requisito que debe existir docker instalado previamente en la máquina.
 
 ```
 docker run -d --name ghost_3_41.1 -e url=http://localhost:2368 -p 3005:2368 ghost:3.41.1
 docker run -d --name ghost_4_44_0 -e url=http://localhost:3003 -p 3003:2368 ghost:4.44.0
 
 ```
-Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456
+Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456.
 
-Tambien es posible usar otro email y contraseña modificando el archivo: https://github.com/franklincandanoza/pruebase2ePruebasAutomatizas/blob/develop/cypress/cypress.json
+Tambien es posible usar otro email y contraseña que se configurará mas adelante.
+
 
 ## Cypress
 
@@ -26,18 +27,34 @@ Tambien es posible usar otro email y contraseña modificando el archivo: https:/
 npm install -g cypress
 ```
 
-### Ejecuciòn de pruebas con Cypress
+### Configurar credenciales para Ghost
+Configurar las credenciales configuradas para Ghost durante el registro en los siguientes archivos:
+Versión 4.44-> /cypress/cypress_ghost_4.44.json
+Versiòn 3.41-> /cypress/cypress_ghost_3.41.json
 
-Para correr las pruebas con Cypress ubicarse sobre la carpeta cypress y luego ejecutar:
+en las propiedades:
+```
+    "env": {
+        "user": "frankcandanoza@hotmail.com",
+        "password": "Pepe123456"
+    },
 ```
 
-Para version de Ghost: 4.42
+Por defecto están las credenciales mencionadas.
+
+### Ejecuciòn de pruebas con Cypress
+
+Para correr las pruebas con Cypress ubicarse sobre la carpeta /cypress y recordar configurar las credenciales en los archivos   y luego ejecutar:
+```
+Para ejecutar pruebas para versión de Ghost: 4.44
 cypress run --config-file cypress_ghost_4.44.json
 
-Para version de Ghost: 3.41
+Para ejecutar pruebas para versión de Ghost: 3.41
 cypress run --config-file cypress_ghost_3.41.json
 
 ```
+
+
 ## Kraken
 
 ### Instalar Kraken
@@ -64,10 +81,19 @@ mkdir reports/screenshots
 - features/web/steps = directorio donde se crean los pasos de cada uno de los escenarios
 - reports = directorio de reportes y screenshots
 - reports/screenshots/<version> = directorio donde se generan los screenshots de las pruebas según la version de ghost bajo pruebas
-    - F<#>_Scenario#_Paso#.png = formato del archivo de imagen del screenshot (Funcionalidad_escenario_paso.png)
+    - {Funcionalidad}/escenario/{Nombre_del_escenario}}.jpg = formato del archivo de imagen del screenshot.
 - properties.json = archivo de configuración con variables globales para la ejecución de los pasos en Gherkin.
 
- 
+
+### Configurar credenciales para Ghost
+Configurar credenciales configuradas para Ghost durante el registro en el siguiente archivo:
+/kraken/properties.json en las propiedades:
+```
+    "USERNAME": "frankcandanoza@hotmail.com",
+    "PASSWORD": "Pepe123456",
+```
+
+
 ### Ejecuciòn de pruebas con Kraken
 
 Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (donde se instalo kraken localmente)  y luego ejecutar:
