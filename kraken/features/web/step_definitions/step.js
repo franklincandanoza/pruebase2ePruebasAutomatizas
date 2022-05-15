@@ -57,7 +57,7 @@ When('I enter password {kraken-string} into selector {kraken-string}', async fun
 
 
  When('I take screenshot of step {kraken-string} and scenario {kraken-string} and feature {kraken-string} and version {kraken-string}', async function (step, scenario, feature, version) {
-           let full_path = "./reports/screenshots/" + version + "/"+feature+"/escenario/"+scenario;
+           let full_path = "./reports/screenshots/" + version + "/"+feature+"/"+scenario;
            let filename= "Paso_" + step;
            takeScreenshot(this.driver, full_path, filename);
          });
