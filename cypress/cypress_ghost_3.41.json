@@ -5,6 +5,8 @@
         "password": "Pepe123456"
     },
     "testFiles": [
+        "./3.41/create_tag.spec.js",
+        "./3.41/create_page.spec.js",
         "./3.41/scenario1.spec.js",
         "./3.41/scenario2.spec.js",
         "./3.41/scenario3.spec.js",

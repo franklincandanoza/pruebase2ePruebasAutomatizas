@@ -1,3 +1,6 @@
+import {Screenshot} from './screenshots/screenshots'
+const screenshot = new Screenshot()
+
 import {Login} from "./pages/login"
 const login = new Login()
 
