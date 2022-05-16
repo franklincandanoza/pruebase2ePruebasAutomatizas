@@ -19,6 +19,56 @@ Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456
 
 Tambien es posible usar otro email y contraseña que se configurará mas adelante.
 
+## Kraken
+
+### Instalar Kraken
+```
+crear un directorio
+entrar en el directorio
+npm install adb
+npm install assertthat
+npm install chai
+npm install kraken-node
+npm install fs
+npm install util
+```
+### Crear estructura del proyecto
+en el mismo directorio ejecutar
+
+ ./node_modules/kraken-node/bin/kraken-node gen
+
+crear el directorio screenshots dentro del directorio reports
+
+mkdir reports/screenshots
+
+### Estructura del proyecto
+- features = directorio donde se crean los archivos de funcionalidades con escenarios
+- features/web/steps = directorio donde se crean los pasos de cada uno de los escenarios
+- reports = directorio de reportes y screenshots
+- reports/screenshots/<version> = directorio donde se generan los screenshots de las pruebas según la version de ghost bajo pruebas
+    - {Funcionalidad}/escenario/{Nombre_del_escenario}}.jpg = formato del archivo de imagen del screenshot.
+- properties.json = archivo de configuración con variables globales para la ejecución de los pasos en Gherkin.
+
+
+### Configurar credenciales para Ghost
+Configurar credenciales configuradas para Ghost durante el registro en el siguiente archivo:
+/kraken/properties.json en las propiedades:
+```
+    "USERNAME": "frankcandanoza@hotmail.com",
+    "PASSWORD": "Pepe123456",
+```
+
+
+### Ejecuciòn de pruebas con Kraken
+
+Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (donde se instalo kraken localmente)  y luego ejecutar:
+```
+./node_modules/kraken-node/bin/kraken-node run
+
+```
+
+
+
 
 ## Cypress
 
@@ -57,53 +107,6 @@ cypress run --config-file cypress_ghost_3.41.json
 
 ```
 
-
-## Kraken
-
-### Instalar Kraken
-```
-crear un directorio
-entrar en el directorio
-npm install adb
-npm install assertthat
-npm install chai
-npm install kraken-node
-npm install fs
-npm install util
-```
-### Crear estructura del proyecto
-en el mismo directorio ejecutar
-
- ./node_modules/kraken-node/bin/kraken-node gen
-
-crear el directorio screenshots dentro del directorio reports
-mkdir reports/screenshots
-
-### Estructura del proyecto
-- features = directorio donde se crean los archivos de funcionalidades con escenarios
-- features/web/steps = directorio donde se crean los pasos de cada uno de los escenarios
-- reports = directorio de reportes y screenshots
-- reports/screenshots/<version> = directorio donde se generan los screenshots de las pruebas según la version de ghost bajo pruebas
-    - {Funcionalidad}/escenario/{Nombre_del_escenario}}.jpg = formato del archivo de imagen del screenshot.
-- properties.json = archivo de configuración con variables globales para la ejecución de los pasos en Gherkin.
-
-
-### Configurar credenciales para Ghost
-Configurar credenciales configuradas para Ghost durante el registro en el siguiente archivo:
-/kraken/properties.json en las propiedades:
-```
-    "USERNAME": "frankcandanoza@hotmail.com",
-    "PASSWORD": "Pepe123456",
-```
-
-
-### Ejecuciòn de pruebas con Kraken
-
-Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (donde se instalo kraken localmente)  y luego ejecutar:
-```
-./node_modules/kraken-node/bin/kraken-node run
-
-```
 
 
 ## Funcionalidades bajo pruebas
@@ -193,6 +196,6 @@ Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (do
     - Comunidad poco activa y poca documentación
     - No es muy clara la sintaxis de algunas de las funciones, tratamos de entender si se basaba en selenium, pero algunos metodos son diferentes.
     - La busqueda de texto en selectores repetidos es dificil de extraer.
-    - Limitada la generación dedatos aleatorios con faker.
+    - Limitada la generación de datos aleatorios con faker.
     
 
