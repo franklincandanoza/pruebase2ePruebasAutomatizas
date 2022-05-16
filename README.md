@@ -87,8 +87,8 @@ Versiòn 3.41-> /cypress/cypress_ghost_3.41.json
 en las propiedades:
 ```
     "env": {
-        "user": "frankcandanoza@hotmail.com",
-        "password": "Pepe123456"
+        "user": "robotpruebas@uniandes.edu.co",
+        "password": "RobotMISO..20&"
     },
 ```
 
