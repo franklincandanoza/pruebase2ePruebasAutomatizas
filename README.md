@@ -11,13 +11,11 @@
 Para el diseño y ejecución de estas pruebas, se utilizaron dos versiones de Ghost 3.41 y 4.44 que ya tiene imagénes definidas en DockerHub. Con los siguientes comandos se podrían descargar y ejecutar el contenedor teniendo como requisito que debe existir docker instalado previamente en la máquina.
 
 ```
-docker run -d --name ghost_3_41.1 -e url=http://localhost:2368 -p 3005:2368 ghost:3.41.1
-docker run -d --name ghost_4_44_0 -e url=http://localhost:3003 -p 3003:2368 ghost:4.44.0
+docker run -d  -e url=http://localhost:2368 -p 3005:2368 ghost:3.41.1
+docker run -d  -e url=http://localhost:3003 -p 3003:2368 ghost:4.44.0
 
 ```
-Crear un usuario con email: frankcandanoza@hotmail.com y contraseña: Pepe123456.
 
-Tambien es posible usar otro email y contraseña que se configurará mas adelante.
 
 ## Kraken
 
@@ -54,8 +52,8 @@ mkdir reports/screenshots
 Configurar credenciales configuradas para Ghost durante el registro en el siguiente archivo:
 /kraken/properties.json en las propiedades:
 ```
-    "USERNAME": "frankcandanoza@hotmail.com",
-    "PASSWORD": "Pepe123456",
+    "USERNAME": "robotpruebas@uniandes.edu.co",
+    "PASSWORD": "RobotMISO..20&",
 ```
 
 
@@ -64,6 +62,7 @@ Configurar credenciales configuradas para Ghost durante el registro en el siguie
 Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (donde se instalo kraken localmente)  y luego ejecutar:
 ```
 ./node_modules/kraken-node/bin/kraken-node run
+Si el primer feature de crear usuario falla, eliminarlo y ejecutar el resto de features.
 
 ```
 
@@ -88,8 +87,8 @@ Versiòn 3.41-> /cypress/cypress_ghost_3.41.json
 en las propiedades:
 ```
     "env": {
-        "user": "frankcandanoza@hotmail.com",
-        "password": "Pepe123456"
+        "user": "robotpruebas@uniandes.edu.co",
+        "password": "RobotMISO..20&"
     },
 ```
 
