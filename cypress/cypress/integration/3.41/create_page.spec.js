@@ -31,4 +31,21 @@ describe('Create page', () => {
         page.validate_published_page(pageName, pageDescription)
 
     })
+    
+    it('Test to create page succesfully with mandatory fields', () => {
+        
+        // Redirect to create member form
+        page.navigate_to_pages_list()
+        
+        page.click_to_create_new_page()
+        
+        var pageName = Math.random()
+        var pageDescription = 'Esta es la nota del nueva pagina: '+pageName
+
+        page.create_page(pageName,  pageDescription, false)    
+
+        page.validate_created_page(pageName, pageDescription)
+        
+        
+    })
   })
