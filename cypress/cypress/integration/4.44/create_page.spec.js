@@ -1,8 +1,12 @@
+
+import {Screenshot} from '../Utilities/screenshots'
+const screenshot = new Screenshot()
+
 import {Login} from "./pages/login"
 const login = new Login()
 
 import {Page} from "./pages/page"
-const page = new Page()
+const page = new Page(screenshot)
 
 describe('Create page', () => {
     
@@ -13,7 +17,7 @@ describe('Create page', () => {
 
     it('Test to create page succesfully with mandatory fields', () => {
         
-        // Redirect to create member form
+        screenshot.case('Test to create page succesfully with mandatory fields')
         page.navigate_to_pages_list()
         
         page.click_to_create_new_page()
@@ -30,7 +34,7 @@ describe('Create page', () => {
 
     it('Test to create page with blank description', () => {
 
-        // Redirect to create page form
+        screenshot.case('Test to create page with blank description')
         page.navigate_to_pages_list()
 
         page.click_to_create_new_page()
@@ -45,7 +49,7 @@ describe('Create page', () => {
 
     it.only('Test to create page failed but the maximum character is higher than allowed', () => {
         
-        // Redirect to create member form
+        screenshot.case('Test to create page failed but the maximum character is higher than allowed')
         page.navigate_to_pages_list()
 
         page.click_to_create_new_page()
@@ -67,6 +71,7 @@ describe('Create page', () => {
 
     it('Test to publish a page', () => {
 
+        screenshot.case('Test to publish a page')
         
         // Redirect to create member form
         page.navigate_to_pages_list()

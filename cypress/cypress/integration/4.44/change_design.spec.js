@@ -1,11 +1,11 @@
-import {Screenshot} from './screenshots/screenshots'
+import {Screenshot} from '../Utilities/screenshots'
 const screenshot = new Screenshot()
 
 import {Login} from "./pages/login"
 const login = new Login()
 
 import {Design} from "./pages/design"
-const design = new Design()
+const design = new Design(screenshot)
 
 describe('Chage Design', () => {
 
@@ -16,7 +16,7 @@ describe('Chage Design', () => {
 
     it('Test to edit color design with bad hex format color', () => {
         
-        // Redirect to create member form
+        screenshot.case('Test to edit color design with bad hex format color')
         design.navigate_to_design_section()
 
         design.click_to_open_brand_menu()
@@ -32,7 +32,7 @@ describe('Chage Design', () => {
 
     it('Test to edit color design with empty hex format color', () => {
         
-        // Redirect to create member form
+        screenshot.case('Test to edit color design with empty hex format color')
         design.navigate_to_design_section()
 
         design.click_to_open_brand_menu()
@@ -48,7 +48,7 @@ describe('Chage Design', () => {
 
     it('Test to edit color design succesfully', () => {
         
-        // Redirect to create member form
+        screenshot.case('Test to edit color design succesfully')
         design.navigate_to_design_section()
 
         design.click_to_open_brand_menu()
