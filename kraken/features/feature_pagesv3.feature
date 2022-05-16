@@ -51,12 +51,13 @@ Scenario:  Deseo ingresar a la aplicación, ver la lista de paginas,  crear una 
     And I wait for 1 seconds
     And I take screenshot of step "4" and scenario "<ESCENARIO_10>" and feature "Paginas" and version "<GHOST-VERSION-1>"
     And I click on Publish with selector "div[class='ember-view ember-basic-dropdown-trigger  gh-btn gh-btn-outline gh-publishmenu-trigger']"
-    And I wait for 1 seconds
+    And I wait for 2 seconds
+    And I take screenshot of step "5" and scenario "<ESCENARIO_10>" and feature "Paginas" and version "<GHOST-VERSION-2>"
     And I push Publish button with selector "button[class='gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view']"
     And I wait for 1 seconds
     Then I go to published page in "<GHOST-VERSION-1-URL5>" "$$name_2"
     And I wait for 1 seconds
     And I expect to stay on published page "<GHOST-VERSION-1-URL5>" "$$name_2"
-    And I take screenshot of step "5" and scenario "<ESCENARIO_10>" and feature "Paginas" and version "<GHOST-VERSION-1>"
+    And I take screenshot of step "6" and scenario "<ESCENARIO_10>" and feature "Paginas" and version "<GHOST-VERSION-1>"
     And I wait for 2 seconds
 
