@@ -3,20 +3,19 @@ export class Tag {
     constructor(screenshot){
         this.screenshot=screenshot;
     }
-
     navigate_to_tags_list(){
         cy.visit(cy.config('baseUrl')+'/#/tags');
-        this.screenshot.take()
+        this.screenshot.take();
     }
 
     navigate_to_internal_tags_list(){
         cy.visit(cy.config('baseUrl')+'/#/tags?type=internal');
-        this.screenshot.take()
     }
 
     click_to_create_new_tag() {
 
         cy.get('span:contains("New tag")').click({force: true});
+        this.screenshot.take();
         return this;
 
     }
@@ -32,13 +31,13 @@ export class Tag {
             if(tagName)
                 cy.get('input[name="name"]').type(tagName)
             if(color)
-                cy.get('input[name="accent-color"]').first().type(color)   
+                cy.get('input[name="accent-color"]').type(color)    
 
         })
-        this.screenshot.take()
 
         // Save
         cy.get('span:contains("Save")').click({force: true});
+        this.screenshot.take();
         
         return this;
     }
@@ -46,7 +45,6 @@ export class Tag {
     validate_if_exist_internal_tag(tagName){
         this.navigate_to_internal_tags_list()
         cy.wait(2000)
-        this.screenshot.take()
         cy.get('h3:contains("'+tagName+'")').click({force: true});
     }
 
@@ -54,17 +52,11 @@ export class Tag {
         this.navigate_to_tags_list()
         cy.wait(2000)
         cy.get('h3:contains("'+tagName+'")').click({force: true});
-        this.screenshot.take()
     }
 
-    validateMessageWhenTagNameFieldValueIsMissing(){
-        cy.get('p[class="response"]').invoke('text').should('eq', '\n    You must specify a name for the tag.\n\n    \n\n    \n\n    \n')
-        cy.get('button[class="gh-btn gh-btn-primary gh-btn-icon gh-btn-red ember-view"]').invoke('text').should('eq','    \n    \n    \n     Retry\n')
-        this.screenshot.take()
-        
-    }
+
     validateMessageWhenTagColorIsWrong(){
-        cy.get('p[class="response"]').invoke('text').should('eq', '\n    \n\n    The colour should be in valid hex format\n\n    \n\n    \n')
+        cy.get('p[class="response"]').invoke('text').should('eq', '\n    \n\n    The color should be in valid hex format\n\n    \n\n    \n')
        
     }
 

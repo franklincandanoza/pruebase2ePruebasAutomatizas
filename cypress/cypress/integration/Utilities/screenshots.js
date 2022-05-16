@@ -10,6 +10,7 @@ export class Screenshot {
     }
  
     take() {
+        cy.wait(1000)
         cy.screenshot(this.case_name+"/caso_"+this.order+".jpg");
         this.order++;
       }

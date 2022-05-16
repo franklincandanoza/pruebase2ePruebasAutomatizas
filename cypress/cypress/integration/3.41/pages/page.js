@@ -43,9 +43,9 @@ export class Page {
             cy.wait(500) 
         }        
         else{
-            cy.get('a.gh-editor-back-button[href="#/pages/"]').click()
+            cy.get('a.blue.ember-view[href="#/pages/"]').click()
             cy.wait(2000)
-        }
+        } 
         this.screenshot.take()
         return this;
     }
