@@ -196,6 +196,6 @@ cypress run --config-file cypress_ghost_3.41.json
     - Comunidad poco activa y poca documentación
     - No es muy clara la sintaxis de algunas de las funciones, tratamos de entender si se basaba en selenium, pero algunos metodos son diferentes.
     - La busqueda de texto en selectores repetidos es dificil de extraer.
-    - Limitada la generación dedatos aleatorios con faker.
+    - Limitada la generación de datos aleatorios con faker.
     
 
