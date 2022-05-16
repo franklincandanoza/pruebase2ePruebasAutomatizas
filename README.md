@@ -199,3 +199,23 @@ cypress run --config-file cypress_ghost_3.41.json
     - Limitada la generación de datos aleatorios con faker.
     
 
+## Regresión Visual para screenshots de kraken ubicándose en la raiz del proyecto
+```
+cd resemble
+node compare_regression.js ../kraken/reports/3.41 ../kraken/reports/4.44
+```
+
+
+## Regresión Visual para screenshots de Cypress ubicándose en la raiz del proyecto
+
+```
+node compare_regression.js ../kraken/reports/3.41 ../kraken/reports/4.44
+
+```
+
+
+Nota: En caso de usar MAC es posible encontrarse con error de archivo .DS_STORE
+En este caso ejecutar sobre la raiz del proyecto:
+```
+find . -name ".DS_Store" -delete
+```

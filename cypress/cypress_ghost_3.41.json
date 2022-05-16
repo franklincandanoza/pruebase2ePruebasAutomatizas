@@ -1,8 +1,8 @@
 {
     "baseUrl": "http://localhost:3005/ghost",
     "env": {
-        "user": "frankcandanoza@hotmail.com",
-        "password": "Pepe123456"
+        "user": "robotpruebas@uniandes.edu.co",
+        "password": "RobotMISO..20&"
     },
     "testFiles": [
         "./3.41/create_tag.spec.js",

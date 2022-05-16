@@ -1,5 +1,5 @@
 import LoginPage from "./LoginPage/LoginPage";
-import Utilities from "./Utilities/Utilities";
+import Utilities from "../Utilities/Utilities";
 
 describe('Escenario 3: Cambiar el diseño, ingresar de nuevo y validar que tenga los datos', function() {
     //it('Autenticando credenciales', function() {

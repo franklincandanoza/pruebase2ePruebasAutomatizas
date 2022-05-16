@@ -1,5 +1,5 @@
 import LoginPage from "./LoginPage/LoginPage";
-import Utilities from "./Utilities/Utilities";
+import Utilities from "../Utilities/Utilities";
 
 describe('Escenario 3: Cambiar el diseño, ingresar valores vacios y validar que genere error', function() {
     //it('Autenticando credenciales', function() {
