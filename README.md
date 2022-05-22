@@ -17,6 +17,16 @@ docker run -d  -e url=http://localhost:3003 -p 3003:2368 ghost:4.44.0
 ```
 
 
+## Prueba Aleatorias
+
+Para correr las pruebas aleatorias ejecutar 
+
+```
+
+cypress run --config-file cypress_ghost_pruebas_aleatorias.jsos_ghost_pruebas_aleatorias.json --headed --no-exit
+
+```
+
 ## Kraken
 
 ### Instalar Kraken
