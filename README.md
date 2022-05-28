@@ -25,59 +25,7 @@ Para correr las pruebas aleatorias ejecutar
 
 cypress run --config-file cypress_ghost_pruebas_aleatorias.jsos_ghost_pruebas_aleatorias.json --headed --no-exit
 
-```
-
-## Kraken
-
-### Instalar Kraken
-```
-crear un directorio
-entrar en el directorio
-npm install adb
-npm install assertthat
-npm install chai
-npm install kraken-node
-npm install fs
-npm install util
-```
-### Crear estructura del proyecto
-en el mismo directorio ejecutar
-
- ./node_modules/kraken-node/bin/kraken-node gen
-
-crear el directorio screenshots dentro del directorio reports
-
-mkdir reports/screenshots
-
-### Estructura del proyecto
-- features = directorio donde se crean los archivos de funcionalidades con escenarios
-- features/web/steps = directorio donde se crean los pasos de cada uno de los escenarios
-- reports = directorio de reportes y screenshots
-- reports/screenshots/<version> = directorio donde se generan los screenshots de las pruebas según la version de ghost bajo pruebas
-    - {Funcionalidad}/escenario/{Nombre_del_escenario}}.jpg = formato del archivo de imagen del screenshot.
-- properties.json = archivo de configuración con variables globales para la ejecución de los pasos en Gherkin.
-
-
-### Configurar credenciales para Ghost
-Configurar credenciales configuradas para Ghost durante el registro en el siguiente archivo:
-/kraken/properties.json en las propiedades:
-```
-    "USERNAME": "robotpruebas@uniandes.edu.co",
-    "PASSWORD": "RobotMISO..20&",
-```
-
-
-### Ejecuciòn de pruebas con Kraken
-
-Para correr las pruebas con Kraken ubicarse sobre el directorio del proyecto (donde se instalo kraken localmente)  y luego ejecutar:
-```
-./node_modules/kraken-node/bin/kraken-node run
-Si el primer feature de crear usuario falla, eliminarlo y ejecutar el resto de features.
-
-```
-
-
-
+``` 
 
 ## Cypress
 
@@ -91,7 +39,6 @@ Configurar las credenciales configuradas para Ghost durante el registro en los s
 ```
 Versión 4.44-> /cypress/cypress_ghost_4.44.json
 
-Versiòn 3.41-> /cypress/cypress_ghost_3.41.json
 ```
 
 en las propiedades:
